@@ -11,46 +11,31 @@ Pattern Rhombus
 
 */
 class file{
-    public static void main(String args[]) { 
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt(); 
+    public static void main(String args[]){
+        Scanner in = new Scanner(System.in);
 
-        
-        int v=0;
-      
-        for (int i=0; i<n; i++) {
-            int j=n;
-            int x=i;
-            v=i;
-            for (j=0; j<n; j++) {
-                if(j>=n-i-1) System.out.print(++v+"\t");
-                else System.out.print(" ");
-            }
-            while(x!=0){
-                System.out.print(--v+"\t");
-                x--;
-            }
-           
-            System.out.println();
+        int n = in.nextInt();
+
+        for (int i=1; i<=n; i++) {
+            print(i,n);
+        }
+        for (int i=n-1; i>=1; i--) {
+            print(i,n);
         }
 
-        n=n;
-        for (int i=0; i<n-1; i++) {
-            int x=n-i-2;
-            v=n-i-1;
-            for (int j=n; j>0; j--) {
-                if(j>n-i-1) System.out.print(" ");
-                else System.out.print(v+++"\t");
-            }
-            v--;
-            while(x!=0){
-                System.out.print(--v+"\t");
-                x--;
-            }
-           
-            System.out.println();
-        }
     }
 
 
+    public static void print(int i, int n){
+        int s = n-i;
+        int d_left = i;
+        int d_right = i-1;
+
+        while(s-- > 0) System.out.print(" ");
+        int x=i-1;
+        while(d_left-- > 0) System.out.print(++x);
+        while(d_right-- > 0) System.out.print(--x);
+
+        System.out.println();
+    }
 }
