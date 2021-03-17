@@ -8,14 +8,9 @@ class file{
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-
 		int n = Integer.parseInt(br.readLine());//reading input
 		String[] arr = br.readLine().split(" ");//reading string array
 
-		// int n = in.nextInt();
-		// String x = in.nextLine();
-		// String s = in.nextLine();
-		// String[] str = s.split(" ");
 		for (int i=0; i<n; i++) {		
 			doo(arr[i], arr[i].length());
 		}
@@ -30,7 +25,7 @@ class file{
 			if(s.charAt(i)=='I' || s.charAt(i)=='i'){
 				stack.push(dlen);
 				while(!stack.isEmpty()){
-					System.out.print(stack.pop()+" ");
+					System.out.print(stack.pop());
 				}
 				dlen++;
 			}
@@ -42,7 +37,7 @@ class file{
 
 		stack.push(dlen);
 		while(!stack.isEmpty()){
-			System.out.print(stack.pop()+" ");
+			System.out.print(stack.pop());
 		}
 
 		System.out.println();
