@@ -19,16 +19,14 @@ class file{
 		
 	}
 
-
+	// generate sorted array from A to B array
 	public static void doo(int a[], int b[], int i, int j, boolean br, String re){
 		if(i>a.length) return;
 		if(j>b.length) return;
 
 		if(!br){
 			System.out.println(re);
-			// return;
 		}
-
 
 		if(br)
 			for(int t=j; t<b.length; t++){

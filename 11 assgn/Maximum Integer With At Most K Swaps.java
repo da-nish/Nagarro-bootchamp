@@ -26,11 +26,11 @@ class file{
 		ar[j] = t ;
 	}
 
-	static int c=1;
-	public static void doo(char ar[], int n, int k){
+	// form maximum number
+	// static String max = set input value
+	public static void doo(char ar[]/*int to char[]*/, int n, int k){
 
 		if(k==0) return;
-
 
 		for (int i=0; i<n; i++) {
 			for (int j=i+1; j<n; j++) {
@@ -44,10 +44,8 @@ class file{
 					doo(ar, n, k-1);
 					swap(ar, i, j);
 				}
-
 			}
 		}
-
-
 	}
+	
 }

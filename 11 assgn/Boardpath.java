@@ -1,31 +1,36 @@
 import java.util.*;
 /*
-Problem: https://www.hackerrank.com/contests/hourrank-7/challenges/array-splitting/problem
+
 */
 class file{
-	public static void main(String args[]){
-		Scanner in = new Scanner(System.in);
+   public static void main(String[] args) {
+		Scanner scn = new Scanner(System.in);
+		int N = scn.nextInt();
+		int M = scn.nextInt();
+		ArrayList<String> ans = getboardpath(0, N, M);
+		for (int i = 0; i < ans.size(); i++) {
+			System.out.print(ans.get(i) + " ");
+		}
+		System.out.println("\n"+ans.size());
 
-		int n=in.nextInt();
-		int m=in.nextInt();
-	
-		doo(n,m,0);
-
-		for(Integer i:li) System.out.print(i+" ");
-	
 	}
 
-
-	static List<Integer> li = new ArrayList<>();
-
-	public static void doo(int n, int m, int re){
-		if(re==m){
-			li.add(re);
+	public static ArrayList<String> getboardpath(int curr, int end, int M) {
+		if (curr == end) {
+			ArrayList<String> baseres = new ArrayList<>();
+			baseres.add("");
+			return baseres;
 		}
+		ArrayList<String> myres = new ArrayList<>();
+		for (int dice = 1; dice <= M && curr + dice <= end; dice++) {
+			ArrayList<String> rr = getboardpath(curr + dice, end, M);
 
-		for(int d=1; d<=m && re+d<=n; d++){
-			doo(n, m, (re)+d);
+			for (String val : rr) {
+				myres.add(dice + val);
+			}
+
 		}
+		return myres;
 
 	}
 

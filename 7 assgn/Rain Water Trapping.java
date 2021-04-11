@@ -15,8 +15,8 @@ class file{
 
 	}
 
+	//rain water tapping
 	public static void doo(int ar[], int n) { 
-        
         Stack<Integer> stack = new Stack<>();
 
 		int leftmax = 0;

@@ -2,17 +2,6 @@ import java.util.*;
 /*
 
 Maze_path( Count, Print)
-Problem description: 
-	
-	IP: 3 3
-	
-		[0,0,0]
-		[0,0,0]
-		[0,0,0] //no need of array, just for the example
-
-	print number of ways to reach from top-left to bottom-right
-
-	OP: VVHH VHVH VHHV HVVH HVHV HHVV
 
 */
 class file{

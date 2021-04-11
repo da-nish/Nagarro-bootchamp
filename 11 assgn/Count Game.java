@@ -15,14 +15,11 @@ class file{
 			ar[i] = in.nextInt();
 		}
 		doo(ar, n, k);
-
-
 	}
 
 	public static void doo(int ar[], int n, int k){
 
 		int re = 0;
-
 		for (int i:ar) {
 
 			int ks = i/k;
@@ -32,7 +29,6 @@ class file{
 
 			re+=ks;
 		}
-
 		System.out.println(re);
 	}
 

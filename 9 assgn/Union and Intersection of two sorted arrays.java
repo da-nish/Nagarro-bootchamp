@@ -1,4 +1,7 @@
 import java.util.*;
+/*
+Find intersection and union of two sorted arrays
+*/
 
 class file{
 	public static void main(String args[]){
@@ -11,8 +14,6 @@ class file{
 
 		for (int i=0; i<n; i++) 
 			ar1[i] = in.nextInt();
-		
-
 
 		int m = in.nextInt();
 		int ar2[] = new int[m]; 
@@ -20,7 +21,6 @@ class file{
 		for (int i=0; i<m; i++) 
 			ar2[i] = in.nextInt();
 		
-         
 
 		union(ar1, ar2, ar1.length, ar2.length);
 		inter(ar1, ar2, ar1.length, ar2.length);

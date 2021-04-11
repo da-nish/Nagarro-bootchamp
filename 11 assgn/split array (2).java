@@ -27,8 +27,16 @@ class file{
 	}
 
 	static List<String> li = new ArrayList<>();
+	/*
+	lsum: left sum
+	rsum: right sum
+	lre: left result
+	rre: right result
+	*/
+	//split array
 	public static void split(int ar[], int i, int lsum, int rsum, String lre,String rre){
 		if(i>ar.length) return;
+
 		if (i==ar.length){
 			if(lsum==rsum){
 				li.add(lre +"and"+rre);

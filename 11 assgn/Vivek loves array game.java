@@ -25,31 +25,20 @@ class file{
 	}
 
 
-
-	public static int doo(int ar[], int start, int end){
-
-		// if(start<0 || start>ar.length) return 0;
-		// if(end<0 || end>ar.length) return 0;
-		// if(start>=end) return 0;
+	//split array depath count
+	public static int doo(int ar[], int start, int end/*n-1*/){
 
 		for(int i=start; i<end; i++){
 			int lsum = sum(ar, start, i);
 			int rsum = sum(ar, i+1, end);
 
 			if(lsum==rsum){
-
 				int left = doo(ar, start, i);
 				int right = doo(ar, i+1, end);
-
 				return Math.max(left, right)+1;
 			}
-
 		}
-
 		return 0;
-
-
-
 	}
 
 

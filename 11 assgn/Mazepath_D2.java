@@ -1,28 +1,4 @@
 import java.util.*;
-/*
-
-Maze_path( Count, Print)
-Problem description: 
-	
-	IP: 3 3
-	
-		[0,0,0]
-		[0,0,0]
-		[0,0,0] //no need of array, just for the example
-
-
-00 01 02 03
-10 11 12 13
-20 21 22 23
-30 31 32 33
-
-
-
-	print number of ways to reach from top-left to bottom-right
-
-	OP: VVHH VHVH VHHV HVVH HVHV HHVV
-
-*/
 class file{
 	public static void main(String args[]){
 		Scanner in = new Scanner(System.in);
